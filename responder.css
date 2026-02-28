@@ -1,0 +1,59 @@
+/* css/responder.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+  font-size: 45px;
+}
+
+.responder-form-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.responder-form-container label {
+  display: block;
+  margin-top: 10px;
+}
+
+.responder-form-container input,
+.responder-form-container select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.responder-form-container button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.responder-form-container button:hover {
+  background-color: darkred;
+}
+
+#successMsg {
+  text-align: center;
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}

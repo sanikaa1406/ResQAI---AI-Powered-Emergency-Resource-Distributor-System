@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join as Responder - ResQAI</title>
+<link rel="stylesheet" href="css/responder.css">
+</head>
+<body>
+
+<h2>Join as a Responder</h2>
+
+<div class="responder-form-container">
+  <form id="responderForm">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" required>
+
+    <label for="state">State:</label>
+    <select id="state" required>
+      <option value="">Select State</option>
+      <option>Delhi</option>
+      <option>Maharashtra</option>
+      <option>Karnataka</option>
+      <option>West Bengal</option>
+      <option>Gujarat</option>
+      <option>Tamil Nadu</option>
+      <option>Punjab</option>
+      <option>Rajasthan</option>
+      <option>Uttar Pradesh</option>
+      <option>Madhya Pradesh</option>
+    </select>
+
+    <label for="type">Resource Expertise:</label>
+    <select id="type" required>
+      <option value="">Select Resource</option>
+      <option>Medical</option>
+      <option>Food</option>
+      <option>Water</option>
+      <option>Shelter</option>
+    </select>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+<div id="successMsg" class="hidden">Thank you! You are now a registered responder.</div>
+
+<!-- Link to external JS -->
+<script src="js/responder.js"></script>
+</body>
+</html>

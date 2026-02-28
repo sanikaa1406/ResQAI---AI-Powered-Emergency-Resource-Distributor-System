@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    position: fixed ;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+
+    background: linear-gradient(90deg, #0b3c5d, #0077b6);
+
+    display: flex;
+    align-items: center;        /* vertical center */
+    justify-content: space-between;
+
+    padding: 0 20px 0 0;
+}
+
+
+.logo img {
+    height: 72px;   /* change this value */
+    width: 75px;    /* keeps proportions correct */
+    display: block;}
+
+.logo span {
+    color: #00e0ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.admin-btn {
+    background: white;
+    color: #0077b6 !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    height: 80vh;
+
+    display: flex;
+    align-items: flex-start;   /* move content to top */
+    justify-content: flex-start;
+
+    padding: 75px 80px 0 20px;  /* top | right | bottom | left */
+
+    background: url("../assets/hero.png") no-repeat center center;
+    background-size: cover;
+}
+
+.hero-title{
+    font-size: 70px;
+    font-weight:800;
+    color: #b62121;
+    margin:0;
+  
+}
+
+
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 30px;
+}
+
+/* Base Button Style */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;              /* fixed height */
+    padding: 0 50px;           /* only left-right padding */
+    
+    font-size: 20px;
+    font-weight: 600;
+
+    border-radius: 50px;       /* half of height */
+    text-decoration: none;
+    border: none;
+
+    transition: 0.3s ease;
+}
+/* Red Emergency Button */
+.primary-btn {
+    background: #da3434;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #cc0000;
+    transform: scale(1.07);
+}
+
+/* Blue Responder Button */
+.secondary-btn {
+    background: #0077b6;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: #023e8a;
+    transform: scale(1.07);
+}
+
+.hero-content {
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================= IMPACT SECTION ================= */
+
+.impact-section {
+    padding: 80px 100px;
+    background: #f4f9ff;
+    text-align: center;
+}
+
+.impact-content p {
+    font-size: 24px;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: auto;
+    color: #222;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.impact-content span {
+    display: block;
+    margin-top: 15px;
+    font-weight: 700;
+    color: #ff2e2e;
+}
+
+.infographic-section {
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    padding: 60px 0;           /* space top & bottom */
+}
+
+.full-img {
+    width: 85%;                /* controls side margin */
+    max-width: 1100px;         /* prevents too large image */
+    height: auto;
+    display: block;
+}
+
+/* ================= STATS SECTION ================= */
+
+.stats-section {
+    background: #0b3c5d;      /* Dark serious background */
+    padding: 100px 80px;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    max-width: 300px;
+}
+
+.stat-box h2 {
+    font-size: 48px;
+    color: #ff2e2e;          /* Emergency red */
+    margin-bottom: 20px;
+}
+
+.stat-box p {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.stat-box {
+    transition: 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-8px);
+}
+
+/* ================= TESTIMONIAL SECTION ================= */
+
+.testimonial-section {
+    padding: 100px 80px;
+    background: #f4f9ff;
+    text-align: center;
+}
+
+.testimonial-section h2 {
+    font-size: 32px;
+    margin-bottom: 60px;
+    color: #0b3c5d;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    max-width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+    color: #0077b6;
+    font-weight: 600;
+}
+.profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;      /* makes it circular */
+    object-fit: cover;       /* prevents stretching */
+    margin-bottom: 20px;
+    border: 3px solid #0077b6;
+}
+
+/* ================= FINAL CTA SECTION ================= */
+
+.final-cta {
+    background: linear-gradient(90deg, #0b3c5d, #0077b6);
+    padding: 120px 80px;
+    text-align: center;
+    color: white;
+}
+
+.cta-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background-color: #0b3c5d;
+    color: white;
+    padding: 80px 80px 30px 80px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-section h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.footer-section ul li a:hover {
+    opacity: 1;
+}
+
+.social-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#dashboardHeading { 
+  color: rgb(213, 38, 38); 
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 42px;
+}
+
+.filters { 
+  margin-bottom: 10px; 
+  display: flex; 
+  gap: 15px; 
+  align-items: center; 
+  background-color: #f9d6d5; /* light red/pink background */
+  padding: 10px 15px; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* subtle shadow */
+}
+.filters label { font-weight: bold; }
+.filters select { border: 1px solid #ccc; }
+.filters button { background-color: #d9534f; } /* red button */
+.filters button:hover { background-color: #c9302c; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

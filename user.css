@@ -1,0 +1,41 @@
+/* Reset & Base */
+*{ margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
+body{ background:#f4f7fb; }
+.dashboard{ display:flex; min-height:100vh; }
+
+/* SIDEBAR */
+.sidebar{ width:230px; background:#1677FF; color:white; padding:25px; }
+.sidebar h2{ margin-bottom:30px; }
+.sidebar ul{ list-style:none; }
+.sidebar li{ padding:12px; margin-bottom:10px; border-radius:8px; cursor:pointer; }
+.sidebar li:hover, .sidebar .active{ background:rgba(255,255,255,0.2); }
+
+/* MAIN */
+.main-content{ flex:1; padding:40px 60px; }
+.main-content h1{ margin-bottom:20px; }
+
+/* FORM */
+.help-form{ background:white; padding:30px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+.help-form label{ display:block; margin-top:20px; font-weight:bold; }
+.help-form input, .help-form textarea, .help-form select{ width:100%; padding:12px; margin-top:8px; border-radius:8px; border:1px solid #ccc; }
+.help-form textarea{ height:100px; }
+
+/* HELP OPTIONS */
+.help-options{ display:flex; justify-content:center; gap:25px; margin-top:15px; }
+.option{ flex:1; background:#aed6f6; padding:20px; border-radius:12px; text-align:center; cursor:pointer; transition:0.3s; }
+.option img{ width:120px; height:120px; object-fit:contain; }
+.option:hover{ transform:translateY(-6px); background:#1677FF; color:white; }
+.option.selected{ background:#1677FF; color:white; transform:scale(1.05); }
+
+/* BUTTON */
+.submit-btn{ margin-top:25px; background:#1677FF; color:white; border:none; padding:14px; width:100%; border-radius:10px; font-size:16px; cursor:pointer; }
+.submit-btn:hover{ background:#0958D9; }
+
+/* STATUS */
+.status-box{ margin-top:20px; background:#28a745; color:white; padding:15px; border-radius:10px; display:none; }
+
+/* MAP */
+#map{ height:400px; width:100%; margin-top:10px; border-radius:10px; border:2px solid #ddd; }
+
+/* RESPONSIVE */
+@media (max-width:768px){ .help-options{ flex-wrap:wrap; } }

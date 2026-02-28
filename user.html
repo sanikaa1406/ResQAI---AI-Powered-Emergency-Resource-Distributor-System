@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Help - ResQAI</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/user.css">
+
+<!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+      <h2>ResQAI</h2>
+      <ul>
+          <li>Dashboard</li>
+          <li class="active">Request Help</li>
+          <li>My Requests</li>
+          <li>Profile</li>
+      </ul>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="main-content">
+      <h1>🚨 REQUEST EMERGENCY HELP</h1>
+
+      <form class="help-form" id="helpForm">
+          <!-- EMERGENCY TYPE WITH IMAGES -->
+          <label>Select Help Type</label>
+          <div class="help-options">
+              <div class="option" data-type="Ambulance">
+                  <img src="assets/ambulance.jpeg" alt="Ambulance">
+                  <p>Ambulance</p>
+              </div>
+              <div class="option" data-type="Oxygen">
+                  <img src="assets/oxygen.jpeg" alt="Oxygen">
+                  <p>Oxygen</p>
+              </div>
+              <div class="option" data-type="Food">
+                  <img src="assets/food.jpeg" alt="Food">
+                  <p>Food</p>
+              </div>
+          </div>
+
+          <!-- DESCRIPTION -->
+          <label>Description</label>
+          <textarea id="description" placeholder="Describe the situation..." required></textarea>
+
+          <!-- LOCATION -->
+          <label>Location</label>
+          <input type="text" id="locationInput" placeholder="Click map or use live location" readonly required>
+          <button type="button" id="liveLocationBtn">📍 Use My Live Location</button>
+          <div id="map"></div>
+
+          <!-- CONTACT -->
+          <label>Contact Number</label>
+          <input type="tel" id="contact" placeholder="Phone number" required>
+
+          <button type="submit" class="submit-btn">Submit Request✅</button>
+      </form>
+
+      <div id="statusMsg" class="status-box hidden"></div>
+
+  </main>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+<!-- External JS -->
+<script src="js/user.js"></script>
+
+
+
+</body>
+
+</html>

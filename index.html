@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ResQAI - Emergency Resource Optimizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+       <div class="logo">
+    <img src="assets/logo.PNG" alt="ResQAI Logo">
+</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Report Emergency</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="admin-btn" onclick="adminLogin()">Admin</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">ResQAI</h1>
+
+        <div class="hero-buttons">
+            <a href="user.html" class="btn primary-btn">Request Help</a>
+            <a href="responder.html" class="btn secondary-btn">Join as Responder</a>
+        </div>
+    </div>
+</section>
+
+  <!--Impact section-->   
+  <section class="impact-section">
+    <div class="impact-content">
+        <p>
+            People don’t die because disasters happen.
+            They die because help arrives too late.
+            <span>ResQAI ensures that when seconds matter, response is immediate.</span>
+        </p>
+    </div>
+</section>
+
+<!--How section-->
+<!-- ================= INFOGRAPHIC SECTION ================= -->
+<section class="infographic-section">
+    <img src="assets/how.png" class="full-img">
+</section>
+<!--Stats section-->
+<!-- ================= STATS SECTION ================= -->
+<section class="stats-section fade-in">
+    <div class="stats-container">
+
+        <div class="stat-box">
+            <h2>70%</h2>
+            <p>of disaster-related deaths occur due to delayed emergency response.</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>10 Minutes</h2>
+            <p>The first 10 minutes after an emergency are critical for survival.</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>Seconds Matter</h2>
+            <p>Every second of delay reduces the chances of survival significantly.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= TESTIMONIAL SECTION ================= -->
+<div class="testimonial-container">
+
+    <div class="testimonial-card">
+        <img src="assets/user1.png" class="profile-img" alt="Priya Sharma">
+        <p>
+            “ResQAI connected us to help within minutes during the flood.
+            Without it, we wouldn’t have made it.”
+        </p>
+        <h4>— Priya Sharma</h4>
+    </div>
+
+    <div class="testimonial-card">
+        <img src="assets/user2.png" class="profile-img" alt="Rahul Mehta">
+        <p>
+            “As a volunteer responder, this platform makes it easy to reach
+            people who truly need immediate support.”
+        </p>
+        <h4>— Rahul Mehta</h4>
+    </div>
+
+    <div class="testimonial-card">
+        <img src="assets/user3.png" class="profile-img" alt="Emergency Volunteer">
+        <p>
+            “The AI-based location tracking is incredibly accurate.
+            It saves critical time.”
+        </p>
+        <h4>— Emergency Volunteer</h4>
+    </div>
+
+</div>
+
+<!-- ================= FINAL CTA SECTION ================= -->
+<section class="final-cta fade-in">
+    <div class="cta-content">
+        <h2>Be the Reason Someone Survives Today.</h2>
+        <p>
+            When seconds matter, your action can save a life.
+            Join ResQAI and be part of a smarter emergency response network.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="user.html" class="btn primary-btn">Request Help</a>
+            <a href="responder.html" class="btn secondary-btn">Join as Responder</a>
+        </div>
+    </div>
+</section>
+ <!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>ResQAI</h3>
+            <p>
+                Smart emergency response powered by AI. 
+                Connecting people in crisis with nearby responders in seconds.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">Impact</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Email: support@resqai.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Chandigarh, India</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 ResQAI. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script>
+const faders = document.querySelectorAll(".fade-in");
+
+const appearOptions = {
+    threshold: 0.3
+};
+
+const appearOnScroll = new IntersectionObserver(function(
+    entries,
+    appearOnScroll
+) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add("active");
+            appearOnScroll.unobserve(entry.target);
+        }
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+</script>
+
+<script>
+function adminLogin(){
+  const password = prompt("Enter admin password:");
+  if(password === "admin123"){ // change to a secure password later
+    window.location.href = "admin.html";
+  } else {
+    alert("Access denied! Wrong password.");
+  }
+}
+</script>
+</body>
+</html>
